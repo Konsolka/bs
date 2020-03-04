@@ -1,9 +1,11 @@
 clear
 echo "== Made by mburl ==="
 echo "=== Welcome to script that checks for norm errors ==="
-echo "Choose files/folders to check"
+echo
+echo "Files/Folders that will be checked"
 ls
-read ans
+echo
+ans="*"
 bool=0
 for file in $ans
 do
@@ -15,6 +17,8 @@ do
 	fi
 done
 if [ $bool -eq 1 ]; then
-echo "\033[31m== Errors found ==\033[0m"
+	echo "\033[31m== Errors found ==\033[0m"
+else
+	echo "\033[32m== No errors found ==\033[0m"
 fi
 echo "===== DONE ====="
